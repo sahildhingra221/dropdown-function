@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page</title>
+</head>
+<body>
+  <select name="cities" id="Cities" onchange="cityChanged();">
+    <option value="0">CITIES</option>
+    <option value="10">Barcelona</option>
+    <option value="8">Moscow</option>
+    <option value="9">Tokyo</option>
+    <option value="6">London</option>
+    <option value="7">New York</option>
+  </select>
+  <select name="cars" id="Cars" onchange="carChanged();">
+    <option value="0">CARS</option>
+    <option value="6">Volvo</option>
+    <option value="4">Ford</option>
+    <option value="2">Nissan</option>
+    <option value="3">Toyota</option>
+  </select>
+  <span id="resultOne"></span>
+  <script type="text/javascript">
+    function cityChanged(){
+      var cityVal = document.getElementById('Cities').value;
+      var carVal = document.getElementById('Cars').value;
+      document.getElementById('resultOne').innerHTML = cityVal * carVal;
+    }
+    function carChanged(){
+      var cityVal = document.getElementById('Cities').value;
+      var carVal = document.getElementById('Cars').value;
+      document.getElementById('resultOne').innerHTML = cityVal * carVal;
+    }
+  </script>
+</body>
+</html>
